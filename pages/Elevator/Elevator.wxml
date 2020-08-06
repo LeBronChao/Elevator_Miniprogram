@@ -1,0 +1,33 @@
+<view>
+	<view class="currentTime">
+		<view class="Date">{{Year}}/{{Month}}/{{Day}}</view>
+		<view class="Time">{{Hour}}:{{Min}}:{{Second}}</view>
+	</view>
+  <view class="currentFloor">
+		<view class="direction">
+			Direction: {{direction}}
+		</view>
+		<view class="user">
+			User Floor: {{usrFloor}}F
+		</view>
+		<view class="elevator">
+			Elevator Floor: {{currentFloor}}F
+		</view>
+	</view>
+	<view class="button">
+		<view class="row1">
+			<view class="floor1" style="background:{{floor1}}" bindtap="callone">1</view>
+			<view class="floor2" style="background:{{floor2}}" bindtap="calltwo">2</view>
+		</view>
+		<view class="row2">
+			<view class="floor3" style="background:{{floor3}}" bindtap="callthree">3</view>
+			<view class="floor4" style="background:{{floor4}}" bindtap="callfour">4</view>
+		</view>
+		<view class="call1" bindtap="request">
+			<view class="circle1"></view>
+			<view class="call">CALL ELEVATOR</view>
+			<view class="circle2"></view>
+		</view>
+	</view>
+	<view class="footer">©️ SZTU's Team of Intelligent Elevator Systems Based on Wireless Sensor Networks</view>
+</view>

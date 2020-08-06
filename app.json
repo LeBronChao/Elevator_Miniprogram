@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/Register/Register",
+    "pages/Elevator/Elevator",
+    "pages/introduce/introduce",
+    "pages/personalCenter/personalCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SZTU Intelligent Elevator",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#1eaae8",
+    "position":"bottom",
+    "list": [
+       {
+      "pagePath": "pages/introduce/introduce",
+      "text": "Introduce",
+      "iconPath":"icon/Introduce.png",
+      "selectedIconPath":"icon/Introduce.png"
+    },{
+      "pagePath": "pages/Elevator/Elevator",
+      "text": "Elevator",
+      "iconPath":"icon/Elevator.png",
+      "selectedIconPath":"icon/Elevator.png"
+    },{
+      "pagePath":"pages/personalCenter/personalCenter",
+      "text":"PersonalCenter",
+      "iconPath":"icon/PersonalCenter.png",
+      "selectedIconPath":"icon/PersonalCenter.png"
+    }]
+  },
+  "usingComponents": {},
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap10.json"
+}

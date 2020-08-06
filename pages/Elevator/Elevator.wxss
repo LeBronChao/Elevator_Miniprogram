@@ -1,0 +1,139 @@
+Page{
+  background: linear-gradient(to bottom,#108bdd,white);
+}
+
+.currentTime{
+  font-size: 90rpx;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.direction,.elevator,.user{
+  justify-content: center;
+  font-size: 60rpx;
+}
+.Date {
+  display: flex;
+  margin-left: 140rpx;
+}
+.Time{
+  display: flex;
+  margin-left: 210rpx;
+}
+.currentFloor{
+  font-size: 70rpx;
+  color: white;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-left: 120rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  margin-top: 0rpx;
+  justify-content: center;
+  border:5rpx solid;
+  border-radius: 30rpx;
+}
+.button{
+  display: flex;
+  flex-direction: column;
+  margin-left: 140rpx;
+  margin-top: 30rpx;
+}
+.call{
+  width:450rpx;
+  height: 100rpx;
+  background: linear-gradient(to right, #32e1e6, #1ca6e7);
+  color: white;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  margin-left: -70rpx;
+  margin-right: -70rpx;
+  z-index: 1;
+}
+.call1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+  margin-left: -20rpx;
+}
+.circle1{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+  background: #32e1e6;
+  z-index: 0;
+}
+.circle2{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+  background: #1ca6e7;
+  z-index: 0;
+}
+.footer{
+  font-size: 18rpx;
+  display: flex;
+  margin-top: 80rpx;
+  margin-left: 60rpx;
+}
+.row1{
+  display: flex;
+  flex-direction: row;
+}
+.row2{
+  display: flex;
+  flex-direction: row;
+}
+.floor1{
+  background: white;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  font-size: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:8rpx solid;
+}
+.floor2{
+  background: white;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  font-size: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150rpx;
+  border:8rpx solid;
+}
+.floor3{
+  background: white;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  font-size: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+  border:8rpx solid;
+}
+.floor4{
+  background: white;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  font-size: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+  margin-left: 150rpx;
+  border:8rpx solid;
+}

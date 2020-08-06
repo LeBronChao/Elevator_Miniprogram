@@ -1,0 +1,28 @@
+<view>
+	<view>
+		<image class="img" src="/image/Login.jpg"></image>
+	</view>
+	<view class="header">
+		<view class="login" bindtap="login">
+			<view class="circle1"></view>
+			<view class="loginword">Login</view>
+			<view class="circle2"></view>
+		</view>
+		<view class="register" bindtap="register">
+			<view class="registerword">Register</view>
+			<view class="circle3"></view>
+		</view>
+	</view>
+	<view class="formContainer">
+		<view class="inputWord">UserName:<input class="input"></input></view>
+		<view class="inputWord">Password:<input class="input" type="password"></input></view>
+		<view class="inputWord">Confirm Password:<input class="input" type="password"></input></view>
+		<view class="inputWord">Phone:<input class="input"></input></view>
+		<view class="submit" bindtap="register">
+			<view class="circle4"></view>
+			<view class="submitWord">Submit</view>
+			<view class="circle5"></view>
+		</view>
+	</view>
+	<view class="footer">©️ SZTU's Team of Intelligent Elevator Systems Based on Wireless Sensor Networks</view>
+</view>

@@ -1,0 +1,134 @@
+page{
+  display: flex;
+  align-items: flex-start;
+}
+.img {
+  width: 118%;
+  z-index: -3;
+  margin-left: -20rpx;
+}
+.header{
+  display:flex;
+  flex-direction:row;
+  margin-left: 140rpx;
+  margin-top: -50rpx;
+}
+.circle1 {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100%;
+  background: white;
+  z-index: 0;
+  margin-right: -48rpx;
+}
+
+.circle2 {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100%;
+  background:  #32e1e6;
+  z-index:1;
+  margin-left: -48rpx;
+}
+.login{
+  display: flex;
+  flex-direction: row;
+}
+.loginword {
+  z-index: 0;
+  height: 90rpx;
+  width: 220rpx;
+  background: white;
+  color: black;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15rpx;
+}
+.register {
+  height: 90rpx;
+  color: black;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  margin-left: -48rpx;
+}
+
+.circle3 {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100%;
+  background: #1ca6e7;
+  z-index: 1;
+  margin-left: -48rpx;
+}
+
+.registerword {
+  z-index: 4;
+  height: 90rpx;
+  width: 141rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #32e1e6, #1ca6e7);
+  padding-left: 40rpx;
+  color: white;
+  padding-right: 15rpx;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 165rpx;
+  margin-top: 50rpx;
+}
+
+.input {
+  height: 72rpx;
+  width: 452rpx;
+  background: rgb(231, 231, 231);
+  border-radius: 9rpx;
+}
+.inputWord{
+  margin-top: 10rpx;
+}
+.submit {
+  margin-left: 15rpx;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.submitWord{
+  background: linear-gradient(to right, #32e1e6, #1ca6e7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 362rpx;
+  height: 81.4rpx;
+}
+.circle4 {
+  height: 81.4rpx;
+  width: 81.4rpx;
+  border-radius: 100%;
+  background: #32e1e6;
+  z-index: -1;
+  margin-right:-46rpx;
+}
+
+.circle5 {
+  height: 81.4rpx;
+  width: 81.4rpx;
+  border-radius: 100%;
+  background: #1ca6e7;
+  z-index: -1;
+  margin-left: -46rpx;
+}
+
+.footer {
+  font-size: 18rpx;
+  display: flex;
+  margin-left: 60rpx;
+  margin-top: 200rpx;
+}
