@@ -1,1 +1,137 @@
-<view>介绍页面</view>
+<view>
+  <view class="time-container">
+    <image class="icon" src="/image/time.png" />
+    <view class="time-text-container">
+      <view class="time-text">
+        <view class="time-number">{{Year}}</view>年<view class="time-number">{{Month}}</view>月<view class="time-number">
+          {{Day}}</view>日
+      </view>
+      <view class="time-text">
+        <view class="time-number">{{Hour}}</view>时<view class="time-number">{{Min}}</view>分<view class="time-number">
+          {{Second}}</view>秒
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="item-container" style="margin-top:350rpx;">
+      <view class="item-title">
+        温度
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/temp.png"></image>
+        <view class="item-number">{{Temperature}}</view>
+        <view class="item-font">℃</view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        湿度
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/hum.png"></image>
+        <view class="item-number">{{Humidity}}</view>
+        <view class="item-font">%</view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        光照强度
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/shine.png"></image>
+        <view class="item-number">{{Lux}}</view>
+        <view class="item-font">lux</view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        三轴加速度
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/acc.png"></image>
+        <view style="margin:-10rpx 0 0 20rpx">
+          <view style="display:flex;flex-direction:row;">
+            <view class="acc-number">X :</view>
+            <view class="acc-font">{{acc.x}} m/s²</view>
+          </view>
+          <view style="display:flex;flex-direction:row;">
+            <view class="acc-number">Y :</view>
+            <view class="acc-font">{{acc.y}} m/s²</view>
+          </view>
+          <view style="display:flex;flex-direction:row;">
+            <view class="acc-number">Z :</view>
+            <view class="acc-font">{{acc.z}} m/s²</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        烟雾
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/smoke.png"></image>
+        <view class="item-number" wx:if="{{smoke==1}}" style="color:red;">Warning</view>
+        <view class="item-number" wx:elif="{{smoke==0}}">General</view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        红外
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/red.png"></image>
+        <view class="item-number" wx:if="{{human==1}}" style="color:red;">Warning</view>
+        <view class="item-number" wx:elif="{{human==0}}">General</view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        蜂鸣器
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/bee.png"></image>
+        <view style="display:flex;flex-direction:column;margin:0 0 0 80rpx">
+          <view class="control-text">蜂鸣器控制</view>
+          <view style="display:flex;flex-direction:row;margin:20rpx 0 0 26rpx">
+            <view style="padding-top:10rpx">OFF</view>
+            <switch checked="{{BEE}}" bindchange="control1" class="control-switch"></switch>
+            <view style="padding-top:10rpx">ON</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        LED
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/LED.png"></image>
+        <view style="display:flex;flex-direction:column;margin:0 0 0 80rpx">
+          <view class="control-text">L E D 控制</view>
+          <view style="display:flex;flex-direction:row;margin:20rpx 0 0 26rpx">
+            <view style="padding-top:10rpx">OFF</view>
+            <switch checked="{{LED}}" bindchange="control2" class="control-switch"></switch>
+            <view style="padding-top:10rpx">ON</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item-container">
+      <view class="item-title">
+        电机
+      </view>
+      <view class="item-info-container">
+        <image class="item-img" src="/image/ele.png"></image>
+        <view style="display:flex;flex-direction:column;margin:0 0 0 80rpx">
+          <view class="control-text">电 机 控 制</view>
+          <view style="display:flex;flex-direction:row;margin:20rpx 0 0 26rpx">
+            <view style="padding-top:10rpx">OFF</view>
+            <switch checked="{{ELE}}" bindchange="control3" class="control-switch"></switch>
+            <view style="padding-top:10rpx">ON</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

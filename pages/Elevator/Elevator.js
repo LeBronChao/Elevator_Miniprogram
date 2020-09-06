@@ -18,10 +18,12 @@ Component({
     Min:"",
     Second:"",
     Target:[],
-    currentFloor:" ",
+    currentFloor:0,
     usrFloor:0,
     beaconStatus:1,
-    direction:'Stop'
+    direction:0,
+    pickerArray:[0,1,2,3,4],
+    pickerValue:0
   },
 
   /**
@@ -29,6 +31,12 @@ Component({
    */
   
   methods: {
+    pickerChange(e){
+      this.setData({
+        pickerValue:e.detail.value,
+        usrFloor:e.detail.value
+      })
+    },
     deleteTarget(i){
       let j=this.data.Target.indexOf(i);
       this.data.Target.splice(j,1)
@@ -87,11 +95,18 @@ Component({
     },
     request(){
       for(let i=0;i<this.data.Target.length;i++){
+        let userFloor
+        if(this.data.pickerValue!=0){
+          userFloor=this.data.pickerValue
+        }
+        else{
+          userFloor=this.data.usrFloor
+        }
         wx.request({
-          url: 'http://183.239.241.108:50001/call',
+          url: '',
           data: {
-            "usrcurfloor":this.data.usrFloor,
-            "usrtarfloor":this.data.Target[i]
+            "usrcurfloor":userFloor,
+            "usrtarfloor":parseInt(this.data.Target[i])
           },
           method: "POST",
           success: (res) => {
@@ -155,10 +170,13 @@ Component({
                         a=i
                       } 
                     }
-                    that.setData({
+                    if(that.data.pickerValue==0){
+                      that.setData({
                       usrFloor:beacons[a].major
                     })
-                    console.log('用户所在楼层：'+beacons[a].major+'F');
+                    }
+
+                    console.log('用户所在楼层：'+this.data.usrFloor+'F');
                   
                   reqContent.ble = bleArray;
                   //redisSave(reqContent);
@@ -183,7 +201,7 @@ Component({
               beaconStatus:1
             })
             console.log('蓝牙未打开')
-            wx.showToast({ title: "Please open the bluetooth", icon: "none", duration: 2000 })
+            //wx.showToast({ title: "Bluetooth can not work", icon: "none", duration: 2000 })
           }
         })
       }
@@ -234,27 +252,13 @@ Component({
       this.begin();
     }
     wx.request({
-      url: 'http://183.239.241.108:50001/get',
+      url: '',
       method: "GET",
       success: (res) => {
         this.setData({
-          currentFloor:res.data.elefloor
+          currentFloor:res.data.elefloor,
+          direction:res.data.direction
         })
-        if(res.data.direction==0){
-          this.setData({
-            direction:'Stop'
-          })
-        }          
-        else if(res.data.direction==1){
-          this.setData({
-            direction:'Up'
-          })
-        }
-        else if(res.data.direction==2){
-          this.setData({
-            direction:'Down'
-          })
-        }
       },
       fail: (res) => {
         console.log('请求失败'),

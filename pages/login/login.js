@@ -21,7 +21,7 @@ Component({
   methods: {
     login(){
       wx.reLaunch({
-        url: '/pages/Elevator/Elevator',
+        url: '/pages/introduce/introduce',
         success:()=>{
           console.log("页面跳转成功！")
         },

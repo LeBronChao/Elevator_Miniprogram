@@ -137,3 +137,43 @@ Page{
   margin-left: 150rpx;
   border:8rpx solid;
 }
+.user{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.status-container{
+  display: flex;
+  flex-direction: row;
+}
+.ele-img {
+  width: 66rpx;
+  height: 66rpx;
+  margin:13rpx 0 0 20rpx
+}
+.ele-img-uping{
+  width: 66rpx;
+  height: 66rpx;
+  animation:uping 1s infinite linear
+}
+@keyframes uping{
+  from{
+    margin:19.8rpx 0 0 20rpx
+  }
+  to{
+    margin:-10.8rpx 0 0 20rpx
+  }
+}
+.ele-img-downing{
+  width: 66rpx;
+  height: 66rpx;
+  animation:downing 1s infinite linear
+}
+@keyframes downing{
+  from{
+    margin:-10.8rpx 0 0 20rpx
+  }
+  to{
+    margin:19.8rpx 0 0 20rpx
+  }
+}

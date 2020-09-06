@@ -1,1 +1,86 @@
-/* pages/introduce/introduce.wxss */
+Page{
+  background: #eeee
+}
+.time-container{
+  background: white;
+  height: 280rpx;
+  width: 660rpx;
+  border-radius: 60rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 46rpx;
+  top: 40rpx;
+  right: 46rpx;
+  bottom: 40rpx;
+}
+.icon{
+  height: 120rpx;
+  width: 120rpx;
+  margin: 80rpx 56rpx 0 60rpx;
+}
+.time-text-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.time-text{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  align-items: flex-end;
+}
+.time-number{
+  font-size: 60rpx;
+}
+.item-container{
+  background: white;
+  height: 300rpx;
+  width: 660rpx;
+  margin: 26rpx 46rpx 26rpx 46rpx;
+  border-radius: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+.item-title{
+  color: dimgray;
+  font-size: 30rpx;
+  padding: 26rpx 20rpx 16rpx 40rpx;
+  margin: 0 20rpx 0 20rpx;
+  border-bottom: 1rpx solid dimgray;
+}
+.item-info-container{
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx 0 30rpx 68rpx;
+}
+.item-img{
+  height: 120rpx;
+  width: 120rpx;
+}
+.item-number{
+  font-size: 88rpx;
+  margin: 12rpx 0 0 60rpx;
+}
+.item-font{
+  font-size: 36rpx;
+  padding: 60rpx 0 0 20rpx;
+}
+.acc-number{
+  font-size: 38rpx;
+  margin: 0rpx 0 0 60rpx;
+}
+.acc-font{
+  font-size: 36rpx;
+  margin-left: 60rpx;
+}
+.control-text{
+  font-size: 46rpx;
+  margin: -20rpx 0 0 30rpx;
+}
+.control-switch{
+  height: 36rpx;
+  width: 36rpx;
+  margin: 0 68rpx 0 8rpx;
+}

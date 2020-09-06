@@ -2,14 +2,14 @@
   "pages": [
     "pages/login/login",
     "pages/Register/Register",
-    "pages/Elevator/Elevator",
     "pages/introduce/introduce",
+    "pages/Elevator/Elevator",
     "pages/personalCenter/personalCenter"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "SZTU Intelligent Elevator",
+    "navigationBarTitleText": "SZTU Intelligent Campus",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -18,7 +18,7 @@
     "list": [
        {
       "pagePath": "pages/introduce/introduce",
-      "text": "Introduce",
+      "text": "Monitoring",
       "iconPath":"icon/Introduce.png",
       "selectedIconPath":"icon/Introduce.png"
     },{

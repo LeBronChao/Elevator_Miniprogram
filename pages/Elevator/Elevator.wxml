@@ -4,11 +4,21 @@
 		<view class="Time">{{Hour}}:{{Min}}:{{Second}}</view>
 	</view>
   <view class="currentFloor">
-		<view class="direction">
-			Direction: {{direction}}
+		<view class="status-container">
+		<view class="direction">Status:</view>
+		<image wx:if="{{direction==0}}" src='../../image/stop.png' class="ele-img"/>
+		<image wx:elif="{{direction==1}}" src='../../image/up.png' class="ele-img"/>
+		<image wx:elif="{{direction==2}}" src='../../image/down.png' class="ele-img"/>
+		<image wx:elif="{{direction==3}}" src='../../image/up.png' class="ele-img-uping"/>
+		<image wx:elif="{{direction==4}}" src='../../image/down.png' class="ele-img-downing"/>
 		</view>
-		<view class="user">
-			User Floor: {{usrFloor}}F
+		<view class="user" >
+			<view>User Floor: {{usrFloor}}F</view>
+			<picker range="{{pickerArray}}"  style="width:10rpx;height:10rpx" bindchange="pickerChange">
+				<view style="font-size:20rpx;display: flex;flex-direction: row;margin:12rpx 0 0 20rpx">
+					备用
+				</view>
+			</picker>
 		</view>
 		<view class="elevator">
 			Elevator Floor: {{currentFloor}}F
